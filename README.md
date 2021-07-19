@@ -7,6 +7,7 @@ My personal NeoVim config.
 1. Install NeoVim.
 2. Install dependencies: `git`, `nodejs`
 3. Clone this repository to `~/.config/nvim/`.
-4. Open NeoVim and run `:PlugInstall`.
-5. Reopen NeoVim
-6. Enjoy it!
+4. Install [vim-plug](https://github.com/junegunn/vim-plug)
+5. Open NeoVim and run `:PlugInstall`.
+6. Reopen NeoVim
+7. Enjoy it!
