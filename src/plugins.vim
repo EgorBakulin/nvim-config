@@ -30,11 +30,4 @@ Plug 'mattn/emmet-vim'
 
 Plug 'flazz/vim-colorschemes'
 
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'laher/fuzzymenu.vim'
-
-nmap <silent> <space> <Plug>(Fzm)
-vmap <silent> <C-space> <Plug>(FzmVisual)
-
 call plug#end()
