@@ -30,4 +30,5 @@ Plug 'mattn/emmet-vim'
 
 Plug 'flazz/vim-colorschemes'
 
+Plug 'stephpy/vim-php-cs-fixer'
 call plug#end()
