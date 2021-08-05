@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged/vendor')
 
 Plug 'qbbr/vim-twig'
 

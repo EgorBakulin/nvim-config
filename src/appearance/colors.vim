@@ -1,3 +1,6 @@
+let s:TimeSwitcherEnabled = 1
+let s:SwitcherEnabled = 1
+let s:switcherKey = "<F12>"
 let s:Day_Theme = "Tomorrow" 
 let s:Night_Theme = "Monokai" 
 
@@ -6,23 +9,27 @@ function! Colors_TimeSwither()
     let l:Time_Evening = 18
     let l:Start_Time = str2nr(system("date +%k"))
     if (Start_Time >= Time_Morning && Start_Time < Time_Evening)
-        colorscheme Tomorrow
+        execute "colorscheme " . s:Day_Theme
     else
-        colorscheme Monokai 
+        execute "colorscheme " . s:Night_Theme
     endif 
 endfunction
 
 function! Colors_Switcher()
     if (g:colors_name == s:Night_Theme)
-        colorscheme Tomorrow
+        execute "colorscheme " . s:Day_Theme
     else
-        colorscheme Monokai  
-    endif
+        execute "colorscheme " . s:Night_Theme
+    endif 
 endfunction
 
 function! Colors()
-    call Colors_TimeSwither()
-    map <F12> :call Colors_Switcher()<CR>
+    if(s:TimeSwitcherEnabled)
+        call Colors_TimeSwither()
+    endif
+    if(s:SwitcherEnabled)
+        execute "map " . s:switcherKey . " :call Colors_Switcher()<CR>"
+    endif
 endfunction
 
 call Colors()
