@@ -5,7 +5,7 @@ vim.api.nvim_exec('source ~/.config/nvim/src/plugins.vim', false)
 vim.api.nvim_exec('source ~/.config/nvim/src/appearance.vim', false)
 
 -- tabulation
-vim.api.nvim_exec('source ~/.config/nvim/src/tabulation.vim', false)
+require('src/tabulation')
 
 -- search
 vim.api.nvim_exec('source ~/.config/nvim/src/search.vim', false)
