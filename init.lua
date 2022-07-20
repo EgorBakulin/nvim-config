@@ -8,7 +8,7 @@ vim.api.nvim_exec('source ~/.config/nvim/src/appearance.vim', false)
 require('src/tabulation')
 
 -- search
-vim.api.nvim_exec('source ~/.config/nvim/src/search.vim', false)
+require('src/search')
 
 -- folding
 vim.api.nvim_exec('source ~/.config/nvim/src/folding.vim', false)
