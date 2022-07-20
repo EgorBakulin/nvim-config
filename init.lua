@@ -11,4 +11,4 @@ require('src/tabulation')
 require('src/search')
 
 -- folding
-vim.api.nvim_exec('source ~/.config/nvim/src/folding.vim', false)
+require('src/folding')
