@@ -5,10 +5,10 @@ vim.api.nvim_exec('source ~/.config/nvim/src/plugins.vim', false)
 vim.api.nvim_exec('source ~/.config/nvim/src/appearance.vim', false)
 
 -- tabulation
-require('src/tabulation')
+require('tabulation')
 
 -- search
-require('src/search')
+require('search')
 
 -- folding
-require('src/folding')
+require('folding')
