@@ -2,7 +2,7 @@
 vim.api.nvim_exec('source ~/.config/nvim/src/plugins.vim', false)
 
 -- appearance
-vim.api.nvim_exec('source ~/.config/nvim/src/appearance.vim', false)
+require('appearance')
 
 -- tabulation
 require('tabulation')
