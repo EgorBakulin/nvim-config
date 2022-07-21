@@ -1,4 +1,5 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rafcamlet/coc-nvim-lua'
 
 let g:coc_disable_startup_warning = 1
 
