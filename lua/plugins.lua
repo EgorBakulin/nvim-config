@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {'neoclide/coc.nvim', branch = 'release'}
@@ -20,3 +20,15 @@ return require('packer').startup(function(use)
     use 'mhinz/vim-signify'
     use 'qbbr/vim-twig'
 end)
+
+vim.cmd [[
+let g:coc_disable_startup_warning = 1
+
+let g:coc_global_extensions = ['coc-git', 'coc-phpls', 'coc-css', 'coc-sh', 'coc-rome', 'coc-clangd']
+
+map <C-n> :NERDTreeToggleVCS<CR>
+
+nmap s <Plug>(easymotion-w)
+nmap S <Plug>(easymotion-b)
+]]
+

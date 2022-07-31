@@ -1,5 +1,4 @@
 -- Plugins
-vim.api.nvim_exec('source ~/.config/nvim/src/plugins.vim', false)
 require('plugins')
 
 -- appearance
