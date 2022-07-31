@@ -1,3 +1,3 @@
-vim_plug_install:
-	curl -fLo ~/.config/nvim/autoload --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+install:
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
