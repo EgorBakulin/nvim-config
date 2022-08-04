@@ -43,7 +43,13 @@ require('packer').startup(function(use)
 
     use 'godlygeek/tabular'
 
-    use 'flazz/vim-colorschemes'
+    use {
+        'flazz/vim-colorschemes',
+        config = function()
+            vim.cmd([[colorscheme Monokai]])
+        end
+    }
+
 
     use 'easymotion/vim-easymotion'
 
