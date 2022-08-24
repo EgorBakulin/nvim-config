@@ -60,6 +60,24 @@ require('packer').startup(function(use)
     use 'mhinz/vim-signify'
 
     use 'qbbr/vim-twig'
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require('which-key').setup {
+            }
+        end
+    }
+
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { 
+	    'nvim-lua/plenary.nvim' 
+	},
+        config = function()
+            require('telescope').setup{}
+        end
+    }
 end)
 
 vim.cmd [[
