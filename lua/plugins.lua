@@ -78,6 +78,8 @@ require('packer').startup(function(use)
             require('telescope').setup{}
         end
     }
+
+    use 'habamax/vim-godot'
 end)
 
 vim.cmd [[
