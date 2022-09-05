@@ -3,21 +3,34 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use {'neoclide/coc.nvim', branch = 'release'}
-
     use 'rafcamlet/coc-nvim-lua'
 
     use 'mattn/emmet-vim'
 
     use 'kyazdani42/nvim-web-devicons'
 
+    use 'neovim/nvim-lspconfig'
+
+    use 'hrsh7th/nvim-cmp'
+
+    use 'hrsh7th/cmp-buffer'
+
+    use 'hrsh7th/cmp-path'
+
+    use 'saadparwaiz1/cmp_luasnip'
+
+    use 'L3MON4D3/LuaSnip'
+
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    use 'rafamadriz/friendly-snippets'
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function() 
             require('lualine').setup {
-                options = {
-                    theme = 'gruvbox-material',
+                options = { theme = 'gruvbox-material',
                     component_separators = { left = '', right = ''},
                     section_separators = { left = '', right = ''}
                 }
@@ -27,12 +40,12 @@ require('packer').startup(function(use)
     }
 
     use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v2.x",
+        'nvim-neo-tree/neo-tree.nvim',
+        branch = 'v2.x',
         requires = { 
-            "nvim-lua/plenary.nvim",
-            "kyazdani42/nvim-web-devicons", 
-            "MunifTanjim/nui.nvim",
+            'nvim-lua/plenary.nvim',
+            'kyazdani42/nvim-web-devicons', 
+            'MunifTanjim/nui.nvim',
         },
         config = function()
             vim.api.nvim_set_keymap('n', '<C-n>', ':NeoTreeShowToggle<CR>', { noremap = true })
@@ -51,7 +64,15 @@ require('packer').startup(function(use)
     }
 
 
-    use 'easymotion/vim-easymotion'
+    use {
+        'easymotion/vim-easymotion',
+        config = function()
+            vim.cmd [[
+                nmap s <Plug>(easymotion-w)
+                nmap S <Plug>(easymotion-b) 
+            ]]
+        end
+    }
 
     use 'airblade/vim-gitgutter'
 
@@ -81,14 +102,3 @@ require('packer').startup(function(use)
 
     use 'habamax/vim-godot'
 end)
-
-vim.cmd [[
-let g:coc_disable_startup_warning = 1
-
-let g:coc_global_extensions = ['coc-git', 'coc-phpls', 'coc-css', 'coc-sh', 'coc-rome', 'coc-clangd']
-
-
-nmap s <Plug>(easymotion-w)
-nmap S <Plug>(easymotion-b)
-]]
-
