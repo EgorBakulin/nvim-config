@@ -63,14 +63,14 @@ require('packer').startup(function(use)
         end
     }
 
-
     use {
-        'easymotion/vim-easymotion',
+        'phaazon/hop.nvim',
+        branch = 'v2', 
         config = function()
-            vim.cmd [[
-                nmap s <Plug>(easymotion-w)
-                nmap S <Plug>(easymotion-b) 
-            ]]
+            local hop = require('hop')
+            hop.setup { keys = 'etovxqpdygfblzhckisuran' }
+            vim.api.nvim_set_keymap('n', 's', ':HopWordAC<CR>', {})
+            vim.api.nvim_set_keymap('n', 'S', ':HopWordBC<CR>', {})
         end
     }
 
